@@ -1,6 +1,5 @@
 import 'dart:convert';
-
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class AuthViewmodel with ChangeNotifier {
@@ -33,7 +32,9 @@ class AuthViewmodel with ChangeNotifier {
         return false;
       }
     } catch (e) {
-      print("Login failed: $e");
+      if (kDebugMode) {
+        print("Login failed: $e");
+      }
       _isLoading = false;
       notifyListeners();
       return false;

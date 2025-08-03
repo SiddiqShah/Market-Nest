@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:market_nest/models/product_model.dart';
 import 'package:market_nest/services/product_api_service.dart';
 
@@ -52,7 +52,9 @@ class ProductViewModel extends ChangeNotifier {
     try {
       _products = await ProductApiService.getProducts();
     } catch (e) {
-      print("Error fetching products: $e");
+      if (kDebugMode) {
+        print("Error fetching products: $e");
+      }
     }
 
     _isLoading = false;

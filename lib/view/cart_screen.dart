@@ -121,7 +121,7 @@ class CartScreen extends StatelessWidget {
                         width: 80,
                         height: 80,
                         decoration: BoxDecoration(
-                          color: greyColor.withOpacity(0.2),
+                          color: greyColor,
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Icon(Icons.image, color: greyColor),
@@ -219,7 +219,7 @@ class CartScreen extends StatelessWidget {
                         vertical: 8,
                       ),
                       decoration: BoxDecoration(
-                        border: Border.all(color: greyColor.withOpacity(0.3)),
+                        border: Border.all(color: greyColor),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
@@ -263,12 +263,10 @@ class CartScreen extends StatelessWidget {
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: whiteColor,
-        border: Border(
-          top: BorderSide(color: greyColor.withOpacity(0.3), width: 1),
-        ),
+        border: Border(top: BorderSide(color: greyColor)),
         boxShadow: [
           BoxShadow(
-            color: greyColor.withOpacity(0.1),
+            color: greyColor,
             spreadRadius: 1,
             blurRadius: 10,
             offset: Offset(0, -2),
@@ -331,7 +329,7 @@ class CartScreen extends StatelessWidget {
           ),
 
           SizedBox(height: 16),
-          Divider(thickness: 2, color: greyColor.withOpacity(0.3)),
+          Divider(thickness: 2, color: greyColor),
           SizedBox(height: 16),
 
           // Total Amount

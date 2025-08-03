@@ -4,6 +4,8 @@ import 'package:market_nest/view/login_screen.dart';
 import 'package:market_nest/utils/colors.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }

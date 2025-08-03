@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:market_nest/models/product_model.dart';
 
 class CartItem {
@@ -9,7 +9,7 @@ class CartItem {
 }
 
 class CartViewModel extends ChangeNotifier {
-  List<CartItem> _cartItems = [];
+  final List<CartItem> _cartItems = [];
   bool _isLoading = false;
 
   List<CartItem> get cartItems => _cartItems;
@@ -120,7 +120,9 @@ class CartViewModel extends ChangeNotifier {
       // For now, we'll just simulate loading
       await Future.delayed(Duration(seconds: 1));
     } catch (e) {
-      print("Error syncing cart: $e");
+      if (kDebugMode) {
+        print("Error syncing cart: $e");
+      }
     }
 
     _isLoading = false;

@@ -132,7 +132,7 @@ class ProductDetailScreen extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     decoration: BoxDecoration(
-                      color: greenColor.withOpacity(0.2),
+                      color: greenColor,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
@@ -154,9 +154,7 @@ class ProductDetailScreen extends StatelessWidget {
                         children: List.generate(5, (index) {
                           return Icon(
                             Icons.star,
-                            color: index < 4
-                                ? Colors.orange
-                                : greyColor.withOpacity(0.3),
+                            color: index < 4 ? Colors.orange : greyColor,
                             size: 20,
                           );
                         }),
